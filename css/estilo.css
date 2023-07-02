@@ -434,6 +434,10 @@ body {
     margin-top: 10%;
 }
 
+.imagem-etapas{
+    display: none;
+}
+
 /* #endregion etapas do site */
 
 /* #region trabalhe conosco */
@@ -981,6 +985,7 @@ body {
     .realizados h2{
     font-size: 1.4rem;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .contServRealizados{
@@ -1007,11 +1012,14 @@ body {
 }
 
 .linksServ{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .linksServ a{ 
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .linksServ a:hover{
@@ -1053,19 +1061,27 @@ body {
 }
 
 .cont-etapas h2{
-    width: 6%;
+    width: 4%;
 }
 
-.cont-etapas img{
-    display: flex;
-    width: 200px;
+.img-etapas{
+    display: none;
+}
 
+.imagem-etapas{
+    display: block;
+}
+
+.imagem-etapas  img{
+    width: 300px;
+    margin: 15% 13% 0 13%;
 }
     /* #endregion responsive etapas*/
 
     /* #region responsive trabalhe conosco */
 .trabalheConosco div{
     width: 65%;
+    margin-top: 80px;
 }
     /* #endregion responsive trabalhe conosco */
 
@@ -1167,14 +1183,7 @@ body {
 
 .cont-artigos div div div div div div{
     width: 100%;
-}
-
-.slick-next:before {
-    display: none;
-}
-
-.slick-prev::before, .slick-next::before {
-    display: none;
+    height: 40%;
 }
 
 .slide-blog{
@@ -1185,6 +1194,14 @@ body {
     width: 100%;
 }
 
+.slick-next:before {
+    display: none;
+}
+
+.slick-prev::before, .slick-next::before {
+    display: none;
+}
+
 .cookies{
     right: 5%;
 }
@@ -1193,6 +1210,7 @@ body {
     display: none;
     right: 5%;
 }
+
     /* #endregion responsive blog */
 
     /* #region responsive rodapé */

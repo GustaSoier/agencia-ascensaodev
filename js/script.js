@@ -72,7 +72,7 @@ $('.slide-servRealizados').slick({
       }
     },
     {
-      breakpoint: 400,
+      breakpoint: 380,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
@@ -86,3 +86,4 @@ function linkWhats(){
   var numFone = '5511953710475'
   window.open('https://api.whatsapp.com/send?phone=' + numFone)
 }
+
