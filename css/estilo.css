@@ -36,7 +36,7 @@ body {
 }
 
 .menu a:hover{
-    color:  #636363;
+    color:  #949494;
 }
 
 .menu ul li a{
@@ -353,14 +353,9 @@ body {
     color: #ffffff;
 }
 
-.slide-servRealizados .slick-prev{
-    z-index: 1;
-}
-
 .slide-servRealizados .slick-dots{
     bottom: -35%;
 }
-
 
 .slide-servRealizados .slick-dots li button:before{
     color: #aaaaaa;
@@ -402,6 +397,10 @@ body {
     width: 83%;
 }
 
+.cont-etapas{
+    display: flex;
+}
+
 .cont-etapas h2{
     display: flex;
     text-align: center;
@@ -412,7 +411,7 @@ body {
     color: #000000;
     border-radius: 50%;
     padding: 15px 17px;
-    width: 1.1%;
+    width: 2%;
 }
 
 .cont-etapas h3{
@@ -423,6 +422,16 @@ body {
 
 .cont-etapas p{
     font-weight: 300;
+    width: 80%;
+}
+
+.cont-etapas img{
+    width: 500px;
+}
+
+.img-etapas{
+    align-self: center;
+    margin-top: 10%;
 }
 
 /* #endregion etapas do site */
@@ -549,12 +558,9 @@ body {
 .slide-avaliacoes .slick-prev{
     z-index: 1;
 }
-
-
 /* #endregion avaliações */ 
 
 /* #region artigos */
-
 .artigos h3{
     margin-top: 100px;
     text-align: center;
@@ -567,7 +573,7 @@ body {
 .artigos h2{
     text-align: center;
     font-size: 30px;
-    margin: 40px 0;
+    margin: 30px 0;
     font-weight: bolder;
 }
 
@@ -575,19 +581,12 @@ body {
     font-weight: 300;
 }
 
-/* .cont-artigos{
-    display: flex;
-    justify-content: space-around;
-    color: #000000;
-    width: 100%;
-} */
-
 .cont-artigos div div div div div div{
     margin-top: 80px ;
     background-color: #fcfcfc;
     color: #000;
     border-radius: 16px;
-    height: 450px;
+    height: 500px;
     padding: 20px;
 }
 
@@ -597,55 +596,14 @@ body {
     text-align: center;
 }
 
-.slick-prev::before, .slick-next::before {
-     font-size: 30px;
-}
-
-
-
-/* 
 .cont-artigos p{
-    text-align: justify;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
 }
 
-.cont-artigos h2{
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 35px;
-} 
-
-.slide-blog{
-    border-radius: 20px;
-    height: 300px;
-    width: 1200px;
-    text-align: center;
+.slick-prev::before, .slick-next::before {
+     font-size: 30px;
 }
-
-.slide-blog img{
-    border: none;
-    display: inline;
-}
-
-.slide-blog .slick-next {
-    right: 10px;
-}
-
-.slick-next:before {
-    content: '→';
-    color: #ffffff;
-    font-size: 30px;
-}
-
-.slide-blog .slick-prev:before, .slide-blog .slick-next:before{
-    font-size: 35px;   
-    color: #ffffff;
-}
-
-.slide-blog .slick-prev{
-    z-index: 1;
-} */
 
 .btn-artigo{
     display: flex;
@@ -662,7 +620,7 @@ body {
     font-weight: bold;
     border-radius: 1000px;
     margin-bottom: 70px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .btn-artigo a:hover{
@@ -810,18 +768,17 @@ body {
 /* 0 a 600px para celular - INICIO */
 @media (max-width: 600px){    
     /* #region responsive sobre */
+.sobre{
+    background-color:#171717;
+    min-height: 0;
+}
+    
 .topo{
     flex-direction: row;
 }
 
-.topo, .sobre{
-    background: url(../img/fundo-mobile.gif) no-repeat;
-    background-attachment: fixed;
-    box-shadow: 0px 8px 10px rgb(51, 48, 48);
-}
-
 .logo{
-    margin-left: 25%;
+    margin-left: 5%;
 }
 
 .menu{
@@ -862,7 +819,7 @@ body {
     display: block;
     padding: 20px;
     border: 0;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 
 .menu-fechar{
@@ -978,7 +935,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-    
+ 
 .cont-servicos h2{
     width: 100%;
     font-weight: bold;
@@ -1010,8 +967,7 @@ body {
 
     /* #endregion responsive serviços */
 
-    /* #region responsive trabalhos realizados*/
-    
+    /* #region responsive trabalhos realizados*/  
 .realizados h2{
     font-size: 1.4rem;
     margin-top: 50px;
@@ -1021,8 +977,8 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    margin: 40px 50px;
-    width: 300px;
+    margin: 40px 0;
+    width: 100%;
 }
     
 .contServRealizados div:nth-child(1){
@@ -1040,9 +996,17 @@ body {
     font-size: 17px;
 }
 
-.linksServ a{
-    padding: 0;
-    font-size: 15px;
+.linksServ{
+    display: flex;
+    flex-direction: column;
+}
+
+.linksServ a{ 
+    margin: 0;
+}
+
+.linksServ a:hover{
+    color: #949494;
 }
     
 .btnServRealizados a{ 
@@ -1054,16 +1018,42 @@ body {
 }
 
 .slide-servRealizados{
-    left: 5%;
+    width: 100%;
 }
+
+.slide-servRealizados div{
+    width: 100%;
+}
+
+.slide-servRealizados .slick-prev:before, .slide-servRealizados .slick-next:before { 
+    display: none;
+}
+
     /* #endregion responsive trabalhos realizados */
 
     /* #region responsive etapas */
+.etapas{
+    margin-left: 5%;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.cont-etapas p{
+    font-weight: 300;
+    width: 100%;
+}
+    
+.cont-etapas img{
+    display: flex;
+    width: 200px;
 
+}
     /* #endregion responsive etapas*/
 
     /* #region responsive trabalhe conosco */
-
+.trabalheConosco div{
+    width: 60%;
+}
     /* #endregion responsive trabalhe conosco */
 
     /* #region responsive avaliações */
@@ -1086,10 +1076,9 @@ body {
 }
 
 .cont-avaliacoes{
-    width: 100%;
+    width: 90%;
     border-radius: 15px;
     color: #000000;
-    padding: 20px 150px;
     height: 350px;
 }
     
@@ -1103,22 +1092,23 @@ body {
     display: flex;
     text-align: center;
     font-size: 17px;
-    margin-bottom: 30px;
-    padding: 30px 60px 20px 60px;
+    margin-bottom: 0;
+    padding: 15px;
+    height: 170px;
 }
     
 .cont-avaliacoes h5{
     font-size: 20px;
     font-weight: bolder;
-    margin-top: 15px;
+    margin-top: 0;
 }
     
 .slide-avaliacoes{
-    right: 3%;
+    right: 0;
     border-radius: 20px;
-    height: 300px;
+    height: 120%;
     background-color: #ffffff;
-    width: 1200px;
+    width: 100%;
 }
     
 .slide-avaliacoes img{
@@ -1136,14 +1126,39 @@ body {
     font-size: 35px;   
     color: #ff0000;
     right: 1000px;
+    display: none;
 }
     
 .slide-avaliacoes .slick-prev{
     z-index: 1;
 }
+
+.slick-next{
+    display: none;
+}
+
     /* #endregion responsive avaliações */
 
     /* #region responsive blog */
+.artigos{
+    margin: 0 5%;
+}
+
+.slick-next:before {
+    display: none;
+}
+
+.slick-prev::before, .slick-next::before {
+    display: none;
+}
+
+.slide-blog{
+    width: 100%;
+}
+
+.slide-blog div{
+    width: 100%;
+}
 
 .cookies{
     right: 5%;

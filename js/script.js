@@ -33,13 +33,6 @@ document.querySelector(".menu-fechar").onclick = function () {
 }
 
 // carrosel serviços realizados
-$('.slide-servRealizados').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  dots: true,
-  autoplaySpeed: 3000,
-});
 
 $('.slide-avaliacoes').slick({
   slidesToShow: 1,
@@ -52,5 +45,44 @@ $('.slide-blog').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 2000,
 });
+
+$('.slide-servRealizados').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+
+  ]
+});
+
+function linkWhats(){
+  var numFone = '5511953710475'
+  window.open('https://api.whatsapp.com/send?phone=' + numFone)
+}
