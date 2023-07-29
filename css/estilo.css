@@ -300,7 +300,6 @@ body {
     display: flex;
     align-items: center;
     text-align: justify;
-    margin: 40px 50px;
     width: 300px;
 }
 
@@ -323,11 +322,10 @@ body {
     padding: 20px 30px;
     font-size: 20px;
     font-weight: bold;
-    border-radius: 1000px;
+
 }
 
 .slide-servRealizados{
-    border-radius: 20px;
     height: 300px;
     width: 1200px;
     text-align: center;
@@ -338,8 +336,13 @@ body {
     display: inline;
 }
 
+
 .slide-servRealizados .slick-next {
-    right: 10px;
+    right: 30px;
+}
+
+.slide-servRealizados .slick-prev{
+    left:30px;
 }
 
 .slick-next:before {
@@ -349,7 +352,8 @@ body {
 }
 
 .slide-servRealizados .slick-prev:before, .slide-servRealizados .slick-next:before{
-    font-size: 35px;   
+
+    font-size: 33px;   
     color: #ffffff;
 }
 
@@ -479,10 +483,12 @@ body {
 /* #endregion trabalhe conosco */
 
 /* #region avaliações */
-
 .avaliacoes{
     margin-top: 100px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .avaliacoes h2{
@@ -499,7 +505,6 @@ body {
 }
 
 .cont-avaliacoes{
-    width: 100%;
     border-radius: 15px;
     color: #000000;
     margin: auto;
@@ -516,7 +521,7 @@ body {
     text-align: center;
     font-size: 17px;
     margin-bottom: 30px;
-    padding: 30px 60px 20px 60px;
+    padding: 30px 60px 0 60px;
 }
 
 .cont-avaliacoes h5{
@@ -529,7 +534,7 @@ body {
     border-radius: 20px;
     height: 320px;
     background-color: #ffffff;
-    width: 1200px;
+    width: 800px;
 }
 
 .slide-avaliacoes img{
@@ -590,7 +595,7 @@ body {
     background-color: #fcfcfc;
     color: #000;
     border-radius: 16px;
-    height: 500px;
+    height: 400px;
     padding: 20px;
 }
 
@@ -606,7 +611,7 @@ body {
 }
 
 .slick-prev::before, .slick-next::before {
-     font-size: 30px;
+    font-size: 30px;
 }
 
 .btn-artigo{
@@ -635,7 +640,7 @@ body {
     display: grid;
     grid-column: 2;
     position: fixed;
-    text-align: start;
+    text-align: center;
     padding: 20px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
@@ -643,6 +648,7 @@ body {
     bottom: 50px;
     left: 30px;
     z-index: 1;
+    width: 30%;
 }
 
 .cookies h2{
@@ -684,7 +690,6 @@ body {
    
 /* #region rodape */
 .rodape{
-    /* background-color: #60E1CB; */
     background-color: #57afa2;
     padding-bottom: 50px;
     background-image: url(../img/fundo-rodape.png);
@@ -770,8 +775,279 @@ body {
 
 /* #region responsive */
 
-/* 601 até 900px para not - INICIO */
-/* 601 até 900px para not - FIM */
+/* 601 até 1200px para not - INICIO */
+@media (max-width: 1280px){
+
+.contServRealizados{
+    width: 270px;
+}
+
+.slide-servRealizados{
+    width: 1100px;
+}
+
+.slide-blog.slick-next{
+    display: none;
+}
+
+button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow, button.slick-prev.slick-arrow::before, button.slick-prev.slick-arrow{
+    display: none !important;
+}
+
+.cont-etapas img{
+    width: 400px;
+}
+}
+
+@media (max-width: 1175px){
+main{
+  margin: 0 5%;
+}
+.contServRealizados{
+    width: 270px;
+}
+
+.slide-servRealizados{
+    width: 100%;
+}
+}
+
+@media (max-width: 1050px){
+.imgSobre img{
+    width: 400px;
+}
+
+.logo{
+    margin-left: 5%;
+}
+        
+.menu{
+    background-color: rgba(0, 0, 0, 0.95);
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    right: -350px;
+    max-width: 350px;
+    width: 50%;
+    z-index: 9;    
+    transition: right .6s ease-out;                     
+}
+        
+.menu ul{
+    flex-direction: column;
+}
+        
+.menu ul li{
+    margin: 5% 0;
+}
+        
+.linha{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff
+}
+        
+.btnMenu button{
+    display: none;
+}
+        
+.menu-abrir{
+    background: url(../img/menu-abrir.png);
+    background-size: cover;
+    display: block;
+    padding: 20px;
+    border: 0;
+    margin-left: 20%;
+}
+        
+.menu-fechar{
+    background: url(../img/menu-fechar.png);
+    background-size: cover;
+    display: block;
+    padding: 20px;
+    border: 0;
+}
+        
+.menu-ativo .menu{
+    right: 0;
+}
+        
+.login-menu{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 17%;
+    text-decoration: none;
+    padding: 1.3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.726);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+}
+        
+.login-menu:hover{
+    background-color: #2A92A9;
+    box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4);
+}
+        
+.login-menu:active{
+    background-color: #584bd1;
+}
+
+.linksServ a{
+    font-size: 13px;
+}
+
+.slide-servRealizados img{
+    width: 150px; 
+}
+
+.contServRealizados{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.slide-servRealizados{
+    width: 700px;
+}
+
+.titEtapas h2{
+    margin-top: 50px;
+}
+    
+.caixaRodape1 {
+    margin-left: 30px;
+    width: 16%;
+}
+
+.cont-artigos div div div div div div{
+    height: 100%;
+}
+
+button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow, button.slick-prev.slick-arrow::before, button.slick-prev.slick-arrow{
+    display: none !important;
+}
+
+.caixaRodape2 div:nth-child(1){
+    margin-left: 150px;
+}
+}
+
+@media (max-width: 845px){
+.container-sobre h2{
+    margin-top: 0;
+}
+.sobre-conteudo{
+    margin-left: 15%;
+}
+.imgSobre img{
+    display: none;
+}
+.slide-avaliacoes{
+    width: 500px;
+    height: 350px;
+}
+
+.cont-avaliacoes p{
+    padding: 0 20px;
+}
+.cont-roda{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 5%;
+}
+    
+.caixaRodape1{
+    width: 90%;
+    margin: 0;
+}
+    
+.caixaRodape1 p{
+    width: 100%;
+}
+    
+.caixaRodape1 h2{
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+    
+.caixaRodape2{
+    flex-direction: column;
+    font-family: 'Inter'sans-serif;
+}
+    
+.caixaRodape2 div:nth-child(1){
+    margin-top: 60px;
+    margin-left: 0;
+    text-align: end;
+}
+    
+.caixaRodape2 div:nth-child(2){
+    margin-top: 60px;
+    margin-left: 0px;
+    text-align: start;
+}
+    
+.caixaRodape2 div:nth-child(3){
+    margin-top: 60px;
+    margin-left: 0px;
+    text-align: end;
+}
+    
+.caixaRodape2 h2{
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+}
+    
+.caixaRodape2 a{
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.caixaRodape2 a:hover{
+    color: #5e5e5e;
+}
+    
+#linksRoda{
+    flex-direction: column;
+}
+}
+
+@media (max-width: 700px){
+.linksServ a{
+    padding: 0 0 15px 0;
+}
+
+.contServRealizados{
+    width: 100%;
+}
+
+
+.slide-servRealizados img{
+    width: 200px;
+}
+
+.cont-etapas h2{
+    width: 5%;
+}
+
+
+}
+
+/* 601 até 1200px para not - FIM */
 
 
 /* ################################################ */
@@ -783,6 +1059,10 @@ body {
 .sobre{
     background-color:#171717;
     min-height: 0;
+}
+
+.sobre-conteudo{
+    margin-left: 0 !important;
 }
     
 .topo{
@@ -922,13 +1202,6 @@ body {
     font-weight: 200;
     margin: 0 5%;
 }
-    
-.cont-servicos{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 60px;
-    flex-wrap: wrap;
-}
 
 .cont-servicos img{
     display: flex;
@@ -982,34 +1255,12 @@ body {
     /* #endregion responsive serviços */
 
     /* #region responsive trabalhos realizados*/  
-    .realizados h2{
+.realizados h2{
     font-size: 1.4rem;
     margin-top: 50px;
     margin-bottom: 30px;
 }
-
-.contServRealizados{
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-    margin: 40px 0;
-    width: 100%;
-}
-    
-.contServRealizados div:nth-child(1){
-    margin-top: 0px;
-}
-    
-.contServRealizados img{
-    border: solid 1px #0047FF;
-    border-radius: 30px;
-    margin-bottom: 20px;
-}
-    
-.contServRealizados p{
-    margin-bottom: 40px;
-    font-size: 17px;
-}
+ 
 
 .linksServ{
     display: flex;
@@ -1033,19 +1284,9 @@ body {
     padding: 20px 30px;
     font-size: 20px;
 }
-
-.slide-servRealizados{
-    width: 100%;
-}
-
-.slide-servRealizados div{
-    width: 100%;
-}
-
 .slide-servRealizados .slick-prev:before, .slide-servRealizados .slick-next:before { 
     display: none;
 }
-
     /* #endregion responsive trabalhos realizados */
 
     /* #region responsive etapas */
@@ -1055,8 +1296,14 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.etapas p{
+    font-size: 17px ;
+}
+
 .cont-etapas p{
     font-weight: 300;
+    font-size: 15px;
     width: 100%;
 }
 
@@ -1088,7 +1335,7 @@ body {
 
     /* #region responsive avaliações */
 .avaliacoes{
-    margin-top: 100px;
+    margin-top: 70px;
     text-align: center;
 }
     
@@ -1121,10 +1368,10 @@ body {
 .cont-avaliacoes p{
     display: flex;
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 0;
-    padding: 15px;
-    height: 170px;
+    padding: 35px 15px 0 15px;
+    height: 150px;
 }
     
 .cont-avaliacoes h5{
@@ -1175,11 +1422,25 @@ body {
 
     /* #region responsive blog */
 .artigos{
-    margin: 0 5%;
+    margin-top: 15%;
+}
+
+.artigos h2{
+    font-size: 20px;
+}
+
+.artigos p{
+    margin: 0 10%;
+    font-size: 15px;
+}
+
+.btn-artigo a{
+    margin-top: 20px;
 }
 
 .slide-blog{
     width: 100%;
+    display: flex;
 }
 
 .cont-artigos div div div div div div{
@@ -1189,10 +1450,12 @@ body {
 
 .slide-blog{
     width: 100%;
+    margin-left: 10%;
 }
 
 .slide-blog div{
-    width: 100%;
+    width: 90%;
+    gap: 5px;
 }
 
 .slick-next:before {
@@ -1202,24 +1465,13 @@ body {
 .slick-prev::before, .slick-next::before {
     display: none;
 }
-
-.cookies{
-    right: 5%;
-}
-
-.whatsapp{
-    display: none;
-    right: 5%;
-}
-
     /* #endregion responsive blog */
-
+ 
     /* #region responsive rodapé */
 
 .rodape{
     background-image: url(../img/fundo-rodape.png);
 }
-
 
 .cont-roda{
     flex-direction: column;
@@ -1284,6 +1536,16 @@ body {
     flex-direction: column;
 }
     /* #endregion responsive rodapé */
+}
+
+.cookies{
+    width: 40% !important;
+    right: 5%;
+}
+
+.whatsapp{
+    display: flex;
+    right: 5%;
 }
 /* 601 a 900px para celular - FIM */
 /* #endregion responsive */

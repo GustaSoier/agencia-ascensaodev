@@ -33,7 +33,6 @@ document.querySelector(".menu-fechar").onclick = function () {
 }
 
 // carrosel serviços realizados
-
 $('.slide-avaliacoes').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -41,16 +40,71 @@ $('.slide-avaliacoes').slick({
   autoplaySpeed: 2000,
 });
 
-$('.slide-blog').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-});
 
 $('.slide-servRealizados').slick({
   dots: true,
   infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  responsive: [    
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$('.slide-blog ').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+
+    {
+      breakpoint: 845,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 380,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$('.slide-servRealizados').slick({
+  dots: true,
+  infinite: true,
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -83,7 +137,7 @@ $('.slide-servRealizados').slick({
 });
 
 function linkWhats(){
-  var numFone = '5511953710475'
+  var numFone = '5511978456588'
   window.open('https://api.whatsapp.com/send?phone=' + numFone)
 }
 
